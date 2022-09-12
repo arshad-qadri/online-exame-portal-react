@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Questions from "./Questions";
+import Questions from "../components/Questions";
 
 const Quiz = () => {
-    const [questions,setQuestions]=useState([])
+  const [questions, setQuestions] = useState([]);
 
-    useEffect(()=>{
-        async function fetchData() {
-            const response = await fetch("http://localhost:3000/json/question.json")
-            const res = await  response.json()
-            setQuestions(res.questions)
-        }
-        fetchData()
-        
-    },[])
-   
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("/json/question.json");
+      const res = await response.json();
+      setQuestions(res.questions);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="w-full  min-h-screen  ">

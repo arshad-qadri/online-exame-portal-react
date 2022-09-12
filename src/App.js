@@ -1,10 +1,16 @@
-import './App.css';
-import Quiz from './components/Quiz';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Login from "./pages/Login";
+import Quiz from "./pages/Quiz";
 
 function App() {
   return (
     <>
-      <Quiz/>
+      <Routes>
+      <Route path="/" element={<Login/>}/>
+      <Route path="/exam" element={<Quiz/>}/>
+      {/* <Quiz /> */}
+      </Routes>
     </>
   );
 }
