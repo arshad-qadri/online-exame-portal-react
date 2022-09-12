@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "que": "Which is not valid data type in Javascript",
+      "options": [
+        { "opt": "Undefinded" },
+        { "opt": "Boolean" },
+        { "opt": "float" },
+        { "opt": "Number" }
+      ],
+      "answer": "Undefinded"
+    },
+    {
+      "id": 2,
+      "que": "Adding the style attributes in HTML elements, is known to be ",
+      "options": [
+        { "opt": "Internal" },
+        { "opt": "Inline" },
+        { "opt": "Outline" },
+        { "opt": "External" }
+      ],
+      "answer": "Inline"
+    },
+    {
+      "id": 3,
+      "que": "The link to a bookmark is added in an attribute named",
+      "options": [
+        { "opt": "href" },
+        { "opt": "link" },
+        { "opt": "src" },
+        { "opt": "id" }
+      ],
+      "answer": "href"
+    },
+    {
+      "id": 4,
+      "que": ": A TARGET value that is used when a webpage is locked in a frame, is",
+      "options": [
+        { "opt": "_self" },
+        { "opt": "_top" },
+        { "opt": "_parent" },
+        { "opt": "_blank" }
+      ],
+      "answer": "_top"
+    },
+    {
+      "id": 5,
+      "que": "In HTML elements, CSS can be added in different ",
+      "options": [
+        { "opt": "2 ways" },
+        { "opt": "3 ways" },
+        { "opt": "4 ways" },
+        { "opt": "5 ways" }
+      ],
+      "answer": "3 ways"
+    }
+  ]
+}
