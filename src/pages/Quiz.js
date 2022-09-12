@@ -14,10 +14,8 @@ const Quiz = () => {
   }, []);
 
   return (
-    <div className="w-full  min-h-screen  ">
-      <div className="w-full bg-black text-white py-3 text-center text-2xl font-bold">
-        Quiz Question
-      </div>
+    <div>
+      
       <div className="lg:w-3/6 bg-white mx-auto  my-10">
         <Questions questions={questions} />
       </div>
