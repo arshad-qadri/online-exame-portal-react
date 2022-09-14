@@ -4,7 +4,7 @@ const Login = ({ children }) => {
     <>
       <div
         className="w-full flex justify-center items-center layout"
-        style={{ height: "calc(100vh - 56px)" }}
+        style={{ height: "calc(100vh - 92px)" }}
       >
         {children}
       </div>

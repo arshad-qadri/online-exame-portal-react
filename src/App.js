@@ -5,6 +5,7 @@ import Quiz from "./pages/Quiz";
 import Layout from "./layouts";
 import LogInLayout from "./layouts/Login";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function App() {
           </Routes>
         </LogInLayout>
       )}
+      <Footer/>
     </>
   );
 }

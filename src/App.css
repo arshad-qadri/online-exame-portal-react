@@ -2,6 +2,7 @@
   --dark: #15202b;
   --dark-mid: #192734;
   --dark-low: #22303c;
+  --white: #fff;
 }
 
 .layout {
@@ -10,6 +11,20 @@
 .login {
   background-color: var(--dark-mid);
 }
-.header {
+.header,
+.footer {
   background-color: var(--dark);
+}
+
+.login_btn {
+  background-color: var(--dark);
+}
+
+.layout-exam-dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+.layout-exam-dashboard .exam-left {
+  background-color: var(--dark-mid);
+  height: calc(100vh - 92px);
 }

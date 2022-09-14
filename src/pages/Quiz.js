@@ -15,8 +15,7 @@ const Quiz = () => {
 
   return (
     <div>
-      
-      <div className="lg:w-3/6 bg-white mx-auto  my-10">
+      <div className="">
         <Questions questions={questions} />
       </div>
     </div>
