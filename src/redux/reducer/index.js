@@ -1,8 +1,10 @@
 import loginReducer from "./loginReducer";
-import {combineReducers} from 'redux'
+import { combineReducers } from "redux";
+import questionReducer from "./fetchQueTeducer";
 
 const rootReducer = combineReducers({
-    login : loginReducer
-})
+  login: loginReducer,
+  questions: questionReducer,
+});
 
-export default rootReducer
+export default rootReducer;

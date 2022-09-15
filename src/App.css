@@ -4,7 +4,9 @@
   --dark-low: #22303c;
   --white: #fff;
 }
-
+a:link {
+  text-decoration: none !important;
+}
 .layout {
   background-color: var(--dark-low);
 }

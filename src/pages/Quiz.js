@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Questions from "../components/Questions";
+import { fetchQuestion } from "../redux/action";
 
 const Quiz = () => {
-  const [questions, setQuestions] = useState([]);
+  const [ques, setQues] = useState([]);
+  const dispatch = useDispatch();
+  const { questions } = useSelector((state) => state.questions);
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("/json/question.json");
-      const res = await response.json();
-      setQuestions(res.questions);
-    }
-    fetchData();
+    dispatch(fetchQuestion("/json/question.json"));
   }, []);
+
+  useEffect(() => {
+    setQues(questions);
+  }, [questions]);
 
   return (
     <div>
-      <div className="">
-        <Questions questions={questions} />
-      </div>
+      <Questions questions={ques} />
     </div>
   );
 };
