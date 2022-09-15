@@ -10,7 +10,7 @@ const Header = () => {
   const nevigate = useNavigate();
   useEffect(() => {
     if (!isLogin) {
-      nevigate("/");
+      // nevigate("/");
     }
   }, [isLogin]);
   return (

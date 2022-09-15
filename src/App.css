@@ -30,3 +30,12 @@ a:link {
   background-color: var(--dark-mid);
   height: calc(100vh - 92px);
 }
+.text-color {
+  color: var(--white);
+}
+.btn-color {
+  background-color: var(--white);
+}
+.btn-text-color {
+  color: var(--dark);
+}

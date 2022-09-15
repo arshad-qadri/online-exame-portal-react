@@ -17,7 +17,7 @@ const Quiz = () => {
   }, [questions]);
 
   return (
-    <div>
+    <div className="h-full">
       <Questions questions={ques} />
     </div>
   );

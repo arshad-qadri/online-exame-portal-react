@@ -58,15 +58,16 @@ const Questions = ({ questions }) => {
     }
   };
   return questions.length > 0 && !isSubmit ? (
-    <form>
+    <form className="w-4/5 h-full flex flex-col justify-around mx-auto">
       <div>
-        <p>
-          {ind + 1}. {questions[ind].que}
+        <p className="text-color text-xl font-bold">
+          <span className="text-2xl">{ind + 1}. </span>
+          {` ${questions[ind].que}`}
         </p>
         {questions[ind].options.map((item, index) => (
-          <div key={index} className="my-2">
+          <div key={index} className="my-7">
             <input
-              className="cursor-pointer"
+              className="chekBox-color cursor-pointer scale-150 border-white"
               type="radio"
               name="answer"
               value={item.opt}
@@ -74,29 +75,45 @@ const Questions = ({ questions }) => {
               onChange={(e) => setCheckVal(e.target.value)}
               checked={checkVal === item.opt}
             />
-            <label htmlFor="">{item.opt}</label>
+            <label className="ml-3 text-color text-lg capitalize">
+              {item.opt}
+            </label>
           </div>
         ))}
       </div>
-      <button
-        className="bg-gray-600 text-white px-9 py-2 font-bold"
-        onClick={handlePrevious}
-      >
-        Previous
-      </button>
-      <button
-        className="bg-black text-white px-9 py-2 font-bold cursor-pointer"
-        onClick={handleNext}
-      >
-        {questions.length - 1 === ind ? "Submit" : "Next"}
-      </button>
+      <div className="w-full flex justify-between">
+        <button
+          className={`btn-color btn-text-color px-9 py-2 font-bold ${
+            ind === 0 ? "cursor-no-drop" : "cursor-pointer"
+          }  rounded-md shadow-md`}
+          onClick={handlePrevious}
+          disabled={ind === 0}
+        >
+          Previous
+        </button>
+        <button
+          className="btn-color btn-text-color px-9 py-2 font-bold cursor-pointer rounded-md shadow-md"
+          onClick={handleNext}
+        >
+          {questions.length - 1 === ind ? "Submit" : "Next"}
+        </button>
+      </div>
     </form>
   ) : (
     <>
-      <div className="text-center text-5xl font-bold mb-5">
+      <div className="text-center text-5xl font-bold mb-5 text-color">
         You have scored {scored}/5
       </div>
-      {questions.length > 0 && questions.map((item, ind) => <AllAnswer key={ind} index={ind} que={item.que} ans={storeAns.answers} corAns={item.answer} />)}
+      {questions.length > 0 &&
+        questions.map((item, ind) => (
+          <AllAnswer
+            key={ind}
+            index={ind}
+            que={item.que}
+            ans={storeAns.answers}
+            corAns={item.answer}
+          />
+        ))}
     </>
   );
 };

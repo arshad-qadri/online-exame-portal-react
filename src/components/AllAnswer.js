@@ -2,17 +2,17 @@ import React from "react";
 
 const AllAnswer = ({ index, que, ans, corAns }) => {
   return (
-    <div className="my-4">
-      <p className="text-lg mb-1">
-        <span className="font-bold text-md">{index + 1}. </span>
-        <span>{que}</span>
+    <div className="my-8 text-color w-4/5 mx-auto">
+      <p className="mb-1">
+        <span className="text-2xl font-bold ">{index + 1}. </span>
+        <span className="text-xl">{que}</span>
       </p>
-      <div>
-        <span className="font-bold text-md">Ans: </span>
+      <div className="mt-2">
+        <span className="text-2xl font-bold">Ans: </span>
         <span
           className={`${
-            corAns === ans[index] ? "bg-green-200" : "bg-red-200"
-          } px-2`}
+            corAns === ans[index] ? "bg-green-700" : "bg-red-700"
+          } px-2 text-xl py-1 rounded-sm`}
         >
           {ans[index]}
         </span>
