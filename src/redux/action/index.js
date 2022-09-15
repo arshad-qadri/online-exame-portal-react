@@ -1,4 +1,12 @@
-import { FETCH_QUESTIONS, LOGIN, LOGOUT } from "../type";
+import { FETCH_QUESTIONS, ISLOADING, LOGIN, LOGOUT } from "../type";
+
+// export const loadingAction = (loading) => {
+//   alert(loading);
+//   return {
+//     type: ISLOADING,
+//     payload: loading,
+//   };
+// };
 
 export const loginAction = (formData) => {
   return {

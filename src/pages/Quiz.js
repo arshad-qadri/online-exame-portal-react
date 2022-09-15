@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Loader from "../components/Loader";
 import Questions from "../components/Questions";
 import { fetchQuestion } from "../redux/action";
 
 const Quiz = () => {
   const [ques, setQues] = useState([]);
   const dispatch = useDispatch();
-  const { questions } = useSelector((state) => state.questions);
+  const { questions, isLoading } = useSelector((state) => state.questions);
 
   useEffect(() => {
     dispatch(fetchQuestion("/json/question.json"));
   }, []);
+  useEffect(() => {
+    console.log("isLoading===", isLoading);
+  }, [isLoading]);
 
   useEffect(() => {
     setQues(questions);
@@ -18,7 +22,7 @@ const Quiz = () => {
 
   return (
     <div className="h-full">
-      <Questions questions={ques} />
+      {ques.length > 0 ? <Questions questions={ques} /> : <Loader />}
     </div>
   );
 };

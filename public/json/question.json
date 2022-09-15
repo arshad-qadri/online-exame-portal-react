@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "que": "Which is not valid data type in Javascript",
+      "que": "Which is not valid data type in Javascript?",
       "options": [
         { "opt": "Undefinded" },
         { "opt": "Boolean" },
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "que": "Adding the style attributes in HTML elements, is known to be ",
+      "que": "Adding the style attributes in HTML elements, is known to be.",
       "options": [
         { "opt": "Internal" },
         { "opt": "Inline" },
@@ -24,7 +24,7 @@
     },
     {
       "id": 3,
-      "que": "The link to a bookmark is added in an attribute named",
+      "que": "The link to a bookmark is added in an attribute named.",
       "options": [
         { "opt": "href" },
         { "opt": "link" },
@@ -35,7 +35,7 @@
     },
     {
       "id": 4,
-      "que": ": A TARGET value that is used when a webpage is locked in a frame, is",
+      "que": ": A TARGET value that is used when a webpage is locked in a frame, is.",
       "options": [
         { "opt": "_self" },
         { "opt": "_top" },
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "que": "In HTML elements, CSS can be added in different ",
+      "que": "In HTML elements, CSS can be added in different.",
       "options": [
         { "opt": "2 ways" },
         { "opt": "3 ways" },
