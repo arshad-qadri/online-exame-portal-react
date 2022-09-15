@@ -7,7 +7,7 @@ const index = ({ children }) => {
       <div className="w-full layout" style={{ height: "calc(100vh - 92px)" }}>
         <div className="layout-exam-dashboard">
           <div className="exam-left pl-8 py-4">
-            <h2 className="text-white font-bold text-xl flex items-center gap-2">
+            <h2 className="text-color font-bold text-xl flex items-center gap-2">
               {" "}
               <span>
                 <FiBook />
@@ -16,8 +16,8 @@ const index = ({ children }) => {
             </h2>
 
             <u>
-              <li className="text-white">
-                <a href="#" className="text-white text-sm">
+              <li className="text-color">
+                <a href="#" className="text-color text-sm">
                   Front-End
                 </a>
               </li>

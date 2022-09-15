@@ -6,11 +6,13 @@ import Layout from "./layouts";
 import LogInLayout from "./layouts/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { useSelector } from "react-redux";
 
 function App() {
   const location = useLocation();
+  const { theme } = useSelector((state) => state.theme);
   return (
-    <>
+    <div className={`${theme}`}>
       <Header />
       {location.pathname.includes(["/exam"]) ? (
         <Layout>
@@ -25,8 +27,8 @@ function App() {
           </Routes>
         </LogInLayout>
       )}
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
 

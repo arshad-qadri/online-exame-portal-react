@@ -3,39 +3,92 @@
   --dark-mid: #192734;
   --dark-low: #22303c;
   --white: #fff;
+  --wite-f5: #f5f5f5;
+  --white-ee: #eeeeee;
+  --black: #000000;
 }
 a:link {
   text-decoration: none !important;
 }
-.layout {
-  background-color: var(--dark-low);
-}
-.login {
-  background-color: var(--dark-mid);
-}
-.header,
-.footer {
-  background-color: var(--dark);
-}
-
-.login_btn {
-  background-color: var(--dark);
-}
-
 .layout-exam-dashboard {
   display: grid;
   grid-template-columns: 200px 1fr;
 }
-.layout-exam-dashboard .exam-left {
+.exam-right {
+  height: calc(100vh - 92px);
+  overflow: auto;
+}
+
+.dark .layout {
+  background-color: var(--dark-low);
+}
+.dark .login {
+  background-color: var(--dark-mid);
+}
+.dark .header,
+.dark .footer {
+  background-color: var(--dark);
+}
+
+.dark .login_btn {
+  background-color: var(--dark);
+}
+
+.dark .layout-exam-dashboard .exam-left {
   background-color: var(--dark-mid);
   height: calc(100vh - 92px);
 }
-.text-color {
+.dark .text-color {
   color: var(--white);
 }
-.btn-color {
+.dark .btn-color {
   background-color: var(--white);
 }
-.btn-text-color {
+.dark .btn-text-color {
   color: var(--dark);
+}
+
+/* ============================== light ======================== */
+
+.light .layout {
+  background-color: var(--white);
+}
+.light .login {
+  background-color: var(--wite-f5);
+}
+.light .header,
+.light .footer {
+  background-color: var(--white-ee);
+}
+
+.light .login_btn {
+  background-color: var(--white-ee);
+}
+
+.light .layout-exam-dashboard .exam-left {
+  background-color: var(--wite-f5);
+  height: calc(100vh - 92px);
+}
+.light .text-color {
+  color: var(--black);
+}
+.light .btn-color {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.light .btn-text-color {
+  color: var(--white-ee);
+}
+
+
+.toggle-bg:after {
+    content: '';
+    @apply absolute top-0.5 left-0.5 bg-white border border-gray-300 rounded-full h-5 w-5 transition shadow-sm;
+}
+input:checked + .toggle-bg:after {
+    transform: translateX(100%);
+    @apply border-white;
+}
+input:checked + .toggle-bg {
+    @apply bg-blue-600 border-blue-600;
 }

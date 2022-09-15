@@ -20,11 +20,7 @@ const Quiz = () => {
     setQues(questions);
   }, [questions]);
 
-  return (
-    <div className="h-full">
-      {ques.length > 0 ? <Questions questions={ques} /> : <Loader />}
-    </div>
-  );
+  return <>{ques.length > 0 ? <Questions questions={ques} /> : <Loader />}</>;
 };
 
 export default Quiz;
