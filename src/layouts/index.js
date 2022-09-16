@@ -17,7 +17,7 @@ const index = ({ children }) => {
 
             <u>
               <li className="text-color">
-                <a href="#" className="text-color text-sm">
+                <a href="/#" className="text-color text-sm">
                   Front-End
                 </a>
               </li>

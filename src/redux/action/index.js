@@ -1,4 +1,4 @@
-import { FETCH_QUESTIONS, ISLOADING, LOGIN, LOGOUT, THEME } from "../type";
+import { FETCH_QUESTIONS, LOGIN, LOGOUT, THEME } from "../type";
 
 // export const loadingAction = (loading) => {
 //   alert(loading);
