@@ -11,9 +11,13 @@ const Header = () => {
   const dispatch = useDispatch();
   const nevigate = useNavigate();
   useEffect(() => {
-    if (!isLogin) {
-      nevigate("/");
-    }
+    const redirectLogin = () => {
+      if (!isLogin) {
+        nevigate("/");
+      }
+    };
+    redirectLogin();
+    // eslint-disable-next-line
   }, [isLogin]);
   return (
     <div className="w-full text-color py-3 text-center header">

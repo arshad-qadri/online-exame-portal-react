@@ -11,6 +11,7 @@ const Quiz = () => {
 
   useEffect(() => {
     dispatch(fetchQuestion("/json/question.json"));
+    // eslint-disable-next-line
   }, []);
   useEffect(() => {
     console.log("isLoading===", isLoading);
