@@ -7,16 +7,13 @@ import { fetchQuestion } from "../redux/action";
 const Quiz = () => {
   const [ques, setQues] = useState([]);
   const dispatch = useDispatch();
-  const { questions, isLoading } = useSelector((state) => state.questions);
+  const { questions,
+  } = useSelector((state) => state.questions);
 
   useEffect(() => {
     dispatch(fetchQuestion("/json/question.json"));
     // eslint-disable-next-line
   }, []);
-  useEffect(() => {
-    console.log("isLoading===", isLoading);
-  }, [isLoading]);
-
   useEffect(() => {
     setQues(questions);
   }, [questions]);
